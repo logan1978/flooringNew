@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <%@page import="java.util.*, java.util.concurrent.*;"%>
-<jsp:useBean id="commonBean" scope="session" class="ru.floring_nn.beans.CommonBean"/>
+<jsp:useBean id="commonBean" scope="session" class="ru.flooring_nn.beans.CommonBean"/>
 
 <%@ page language="java" contentType="text/html; charset=utf-8"
     pageEncoding="utf-8"%>
