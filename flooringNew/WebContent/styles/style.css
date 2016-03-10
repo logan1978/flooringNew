@@ -1,0 +1,475 @@
+body
+{
+	width: 1200px;
+	margin: 5px auto;
+	font-size: 6px;
+}
+
+table {
+	width: 100%;
+	border: 0px solid;
+}
+
+td {
+	border: 0px solid;
+}
+
+li {
+list-style-type: none; /* Убираем маркеры */
+}
+
+a {
+	text-decoration: none;
+	color: #3e3e3e;
+	font-family: Arial
+}
+
+input[type="text"] {
+	color: gray;
+	font-size: 14px;
+	border-color: #c0c0c0;
+	border-style: solid;
+	border-width: 1px;
+	padding: 0.4em;
+}
+
+button {
+	color: white;
+	font-size: 14px;
+	border-color: #c0c0c0;
+	border-style: solid;
+	background-color: gray;
+	padding: 0.4em;
+	width: 15%;
+	cursor: pointer;
+}
+
+img {
+	border: none;
+} 
+
+hr {
+	border-style: dotted;
+	border-width: 1px;
+}
+
+/* Main menu */
+#menu_ {
+	
+	position: fixed;
+	width: 1200px;
+	z-index: 9998;
+}
+
+#menu
+{
+	width: 100%;
+	margin: 0;
+	height: 6em;
+	padding: 10px 0 0 0;
+	list-style: none;  
+	background: #111;
+	background: -moz-linear-gradient(#444, #111); 
+    background: -webkit-gradient(linear,left bottom,left top,color-stop(0, #111),color-stop(1, #444));	
+	background: -webkit-linear-gradient(#444, #111);	
+	background: -o-linear-gradient(#444, #111);
+	background: -ms-linear-gradient(#444, #111);
+	background: linear-gradient(#444, #111);
+	border:1px solid black;
+	border-radius:15px;
+	-webkit-border-radius:15px;
+	-moz-border-radius:15px;
+	behavior: url(border-radius.htc); 	
+	-moz-box-shadow: 0 2px 1px #9c9c9c;
+	-webkit-box-shadow: 0 2px 1px #9c9c9c;
+	box-shadow: 0 2px 1px #9c9c9c;
+}
+ 
+#menu li
+{
+	float: left;
+	padding: 0 0 10px 0;
+	position: relative;
+	line-height: 0;
+	width: auto;
+}
+ 
+#menu li:FIRST-CHILD {
+	padding-left: 12%;
+}
+
+#menu li li:FIRST-CHILD {
+	padding-left: 0;
+}
+#menu a 
+{
+	float: left;
+	height: 25px;
+	padding: 0 20px;
+	color: #c7c7c7;
+	text-transform: uppercase;
+	font: 15px/25px Arial, Helvetica;
+	font-weight: bold;
+	text-decoration: none;
+	text-shadow: 0 1px 0 #000000;
+}
+ 
+#menu li:hover > a
+{
+	color: #e5e5e5;
+	background-color: gray;
+	border-style: outset;
+	-moz-border-radius: 10px; /* закругление для старых Mozilla Firefox */
+ 	-webkit-border-radius: 10px; /* закругление для старых Chrome и Safari */
+ 	-khtml-border-radius:10px; /* закругл. для браузера Konquerer системы Linux */
+ 	border-radius: 10px; /* закругление углов для всех, кто понимает */
+	
+}
+ 
+*html #menu li a:hover /* IE6 */
+{
+	color: #ff0080;
+	background-color: gray;
+	border-style: outset;
+	-moz-border-radius: 10px; /* закругление для старых Mozilla Firefox */
+ 	-webkit-border-radius: 10px; /* закругление для старых Chrome и Safari */
+ 	-khtml-border-radius:10px; /* закругл. для браузера Konquerer системы Linux */
+ 	border-radius: 10px; /* закругление углов для всех, кто понимает */
+}
+ 
+#menu li:hover > ul
+{
+	display: block;
+}
+ 
+/* Sub-menu */
+ 
+#menu ul
+{
+    list-style: none;
+    margin: 0;
+    padding: 0;    
+    display: none;
+    position: absolute;
+    top: 35px;
+    left: 0;
+    z-index: 99999;    
+    background: #444;
+    background: -moz-linear-gradient(#444, #111);
+    background: -webkit-gradient(linear,left bottom,left top,color-stop(0, #111),color-stop(1, #444));
+    background: -webkit-linear-gradient(#444, #111);    
+    background: -o-linear-gradient(#444, #111);	
+    background: -ms-linear-gradient(#444, #111);	
+    background: linear-gradient(#444, #111);
+    -moz-box-shadow: 0 0 2px rgba(255,255,255,.5);
+    -webkit-box-shadow: 0 0 2px rgba(255,255,255,.5);
+    box-shadow: 0 0 2px rgba(255,255,255,.5);	
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+ 
+#menu ul ul
+{
+  top: 3px;
+  left: 195px;
+}
+ 
+#menu ul li
+{
+    float: none;
+    margin: 0;
+    padding: 0;
+    display: block;  
+    -moz-box-shadow: 0 1px 0 #111111, 0 2px 0 #777777;
+    -webkit-box-shadow: 0 1px 0 #111111, 0 2px 0 #777777;
+    box-shadow: 0 1px 0 #111111, 0 2px 0 #777777;
+    
+}
+ 
+#menu ul li:last-child
+{   
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;    
+}
+ 
+#menu ul a
+{    
+    padding: 10px;
+	height: 10px;
+	width: 170px;
+	height: auto;
+    line-height: 1;
+    display: block;
+    white-space: nowrap;
+    float: none;
+	text-transform: none;
+}
+ 
+*html #menu ul a /* IE6 */
+{    
+	height: 10px;
+}
+ 
+*:first-child+html #menu ul a /* IE7 */
+{    
+	height: 10px;
+}
+ 
+#menu ul a:hover
+{
+    background: #808080;
+	background: -moz-linear-gradient(#c0c0c0,  #808080);	
+	background: -webkit-gradient(linear, left top, left bottom, from(#c0c0c0), to(#808080));
+	background: -webkit-linear-gradient(#c0c0c0,  #808080);
+	background: -o-linear-gradient(#c0c0c0,  #808080);
+	background: -ms-linear-gradient(#c0c0c0,  #808080);
+	background: linear-gradient(#c0c0c0,  #808080);
+}
+ 
+#menu ul li:first-child > a
+{
+    -moz-border-radius: 5px 5px 0 0;
+    border-radius: 5px 5px 0 0;
+}
+ 
+#menu ul li:first-child > a:after
+{
+    content: '';
+    position: absolute;
+    left: 30px;
+    top: -8px;
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 8px solid #444;
+}
+ 
+#menu ul ul li:first-child a:after
+{
+    left: -8px;
+    top: 12px;
+    width: 0;
+    height: 0;
+    border-left: 0;	
+    border-bottom: 5px solid transparent;
+    border-top: 5px solid transparent;
+    border-right: 8px solid #444;
+}
+ 
+#menu ul li:first-child a:hover:after
+{
+    border-bottom-color: #c0c0c0; 
+}
+ 
+#menu ul ul li:first-child a:hover:after
+{
+    border-right-color: #c0c0c0; 
+    border-bottom-color: transparent; 	
+}
+ 
+ 
+#menu ul li:last-child > a
+{
+    -moz-border-radius: 0 0 5px 5px;
+    border-radius: 0 0 5px 5px;
+}
+ 
+/* Clear floated elements */
+#menu:after 
+{
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: " ";
+	clear: both;
+	height: 0;
+}
+ 
+* html #menu             { zoom: 1; } /* IE6 */
+*:first-child+html #menu { zoom: 1; } /* IE7 */
+
+#Red {
+	color: red;
+}
+
+#body {
+	background-color: #fdfdfd;
+	font-size: 15px;
+}
+
+#firstRow td {
+	text-align:center;
+}
+
+#leftTable {
+	padding-left: 2em;
+}
+
+#catalog li a:HOVER {
+	font-weight: bold;
+}
+
+#catalog li a {
+	color: #585858;
+	font-family: Arial;
+	font-size: 15px;
+	text-decoration: none;
+}
+
+#catalog li {
+	margin-bottom: 0.7em;
+}
+
+#contact tr td[colspan="2"] {
+	text-align: left;
+	font-family: Arial;
+	font-size: 15px;
+	font-weight: bold;
+}
+#contact tr td a {
+	color: #004b97;
+	font-weight: bold;
+}
+
+#contact tr td {
+	text-align: left;
+	font-family: Arial;
+	font-size: 13px;
+	color: #535353;
+}
+
+#contact {
+	width: 90%;
+	margin-left:10%;
+}
+#contact tr {
+	width: 100%;
+	vertical-align: top;
+}
+
+#test1 {
+	margin: 0em auto;
+	border: 2px solid #6699CC;
+	width: 765px;
+	height: 250px;
+}
+
+#catalogArea {
+	margin: auto;
+	background-color: #f2f2f2;
+	width: 765px;
+	border: 1px dotted #c5c5c5;
+	text-align: left;
+}
+
+#catalogArea caption {
+	text-align: left;
+	margin-left: 1em;
+	margin-bottom: 0em;
+}
+
+#catalogArea td {
+	padding-left: 0.5em;
+	border: 0px solid;
+	vertical-align: top;
+}
+
+#catalogArea a {
+	text-decoration: underline;
+	color: black;
+	font-size: 17px;
+	font-weight: bold;
+	margin-bottom: 0em;
+}
+
+#catalogArea span a {
+	text-decoration: underline;
+	color: black;
+	font-size: 14px;
+	font-weight: normal;
+	margin-bottom: 0em;
+}
+
+#catalogArea td a {
+	text-align: center;
+	font-size: 14px;
+	font-weight: normal;
+	
+}
+
+#catalogArea a:HOVER {
+	text-decoration: none;
+}
+
+#pages {
+	width: 755px;
+	text-align: right;
+	font-weight: bold;
+	font-size: 15px;
+}
+#pages span {
+	color: white;
+	background: #444444;
+	text-align: center;
+	padding-left: 0.1em;
+	padding-right: 0.1em;
+	-moz-border-radius: 5px; /* закругление для старых Mozilla Firefox */
+ 	-webkit-border-radius: 5px; /* закругление для старых Chrome и Safari */
+ 	-khtml-border-radius:5px; /* закругл. для браузера Konquerer системы Linux */
+ 	border-radius: 5px; /* закругление углов для всех, кто понимает */
+}
+
+#pages a{
+	font-weight: bold;
+	font-size: 17px;
+	color: #000080;
+}
+
+#product {
+	font-size: 22px;
+	font-weight: bold;
+	font-family: monospace;
+	color: #000080;
+}
+
+.nameShop1 {
+	font-size: 22px;
+	font-family: sans-serif;
+	font-weight: bold;
+	color: #008080;
+}
+
+.nameShop2 {
+	font-size: 18px;
+	font-family: Arial;
+	font-style: italic;
+	color: #800000;
+	font-weight: bold;
+}
+
+.nameShop3 {
+	font-size: 16px;
+	font-family: Arial;
+	color: #000000;
+	font-weight: bold;
+	}
+
+.bigPhoneNumber {
+	font-size: 21px;
+	font-weight: normal;
+	font-family: Arial;
+}
+	
+.ovalBorder5 {
+	background: #e6e6e6;
+	font-weight: bold;
+	border: 1px inset;
+	padding-left: 5px;
+	padding-right: 5px;
+	-moz-border-radius: 5px; /* закругление для старых Mozilla Firefox */
+ 	-webkit-border-radius: 5px; /* закругление для старых Chrome и Safari */
+ 	-khtml-border-radius:5px; /* закругл. для браузера Konquerer системы Linux */
+ 	border-radius: 5px; /* закругление углов для всех, кто понимает */
+}
