@@ -1,4 +1,4 @@
-package ru.floring_nn.beans;
+package ru.flooring_nn.beans;
 
 
 import java.io.File;
